@@ -1,23 +1,14 @@
-# e-plantShopping
+# Foodie recipe app
 
-## Paradise Nursery
+A responsive recipe application built with React and Vite. Browse 10+ categories, search recipes, view complete recipe details, save favorites, and create/edit/delete personal recipes.
 
-**e-plantShopping** is a React-based plant shopping application for browsing houseplants and managing a shopping cart. The app includes a welcoming landing page, categorized plant catalog, product cards, quantity controls, cart totals, and a checkout interaction.
-
-### Features
-
-- Browse plants by category
-- Add plants to the shopping cart
-- Increase or decrease item quantities
-- Remove items from the cart
-- View subtotal and order total
-- Responsive layout for desktop and mobile screens
-
-### Run the project
+## Run locally
 
 ```bash
 npm install
-npm run preview
+npm run web
 ```
 
-The application is configured to run on port `4173` when using the preview command.
+The app uses browser localStorage for favorites and My Food recipes, so it works in Expo Snack-style browser previews without a backend.
+
+Public repository: https://github.com/mehdi03322517511/e-plantShopping
