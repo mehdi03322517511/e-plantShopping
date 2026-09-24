@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ArrowRight, Leaf, ShoppingCart } from 'lucide-react';
+import { useSelector } from 'react-redux';
 import { plantsArray } from './data/plants';
 import { ProductList } from './components/ProductList';
 import { Cart } from './components/Cart';
@@ -24,7 +25,7 @@ export default function App() {
         <button className={page === 'plants' ? 'active' : ''} onClick={() => setPage('plants')}>Plants</button>
         <button className={page === 'about' ? 'active' : ''} onClick={() => setPage('about')}>About</button>
       </nav>
-      <CartLink onClick={() => setPage('cart')} />
+      <button className="cart-button" onClick={() => setPage('cart')} aria-label="Open cart"><ShoppingCart size={23} /><span>Cart</span><CartCount /></button>
     </header>
     {notice && <div className="toast">✓ {notice}</div>}
     {page === 'home' && <main className="hero"><div className="hero-overlay"><div className="hero-copy"><p className="eyebrow">WELCOME TO YOUR NEW OASIS</p><h1>Bring a little<br /><em>paradise</em> home.</h1><p className="hero-text">Thoughtfully grown houseplants to transform your space into a place you love to live.</p><button className="primary" onClick={() => setPage('plants')}>Get Started <ArrowRight size={18} /></button></div></div></main>}
@@ -35,12 +36,7 @@ export default function App() {
   </>;
 }
 
-function CartLink({ onClick }) {
-  return <button className="cart-button" onClick={onClick} aria-label="Open cart"><ShoppingCart size={23} /><span>Cart</span><CartCount /></button>;
-}
-
 function CartCount() {
-  const { useSelector } = require('react-redux');
   const count = useSelector((state) => state.cart.items.reduce((total, item) => total + item.quantity, 0));
   return count > 0 ? <i>{count}</i> : null;
 }

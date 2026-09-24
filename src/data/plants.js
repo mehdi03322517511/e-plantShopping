@@ -1,17 +1,11 @@
 export const plantsArray = [
   { category: 'Air Purifying', plants: [
-    { id: 1, name: 'Snake Plant', cost: 24.99, image: 'https://images.unsplash.com/photo-1593482892290-f54927ae2c2e?auto=format&fit=crop&w=700&q=80', description: 'A resilient beauty that thrives with little care.' },
-    { id: 2, name: 'Peace Lily', cost: 29.99, image: 'https://images.unsplash.com/photo-1593691509543-c55fb32e5cee?auto=format&fit=crop&w=700&q=80', description: 'Elegant white blooms and wonderfully fresh air.' },
-    { id: 3, name: 'Boston Fern', cost: 19.99, image: 'https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=700&q=80', description: 'Lush, feathery fronds for a calm indoor oasis.' }
-  ]},
+    ['Snake Plant', 24.99, '1593482892290-f54927ae2c2e', 'A resilient beauty that thrives with little care.'], ['Peace Lily', 29.99, '1593691509543-c55fb32e5cee', 'Elegant white blooms and wonderfully fresh air.'], ['Boston Fern', 19.99, '1614594975525-e45190c55d0b', 'Lush, feathery fronds for a calm indoor oasis.'], ['Spider Plant', 17.99, '1572688484438-313a6a8', 'An easygoing classic with lively striped leaves.'], ['Rubber Plant', 32.99, '1509423350716-97f9360b4', 'Glossy leaves and a bold, architectural silhouette.'], ['Areca Palm', 36.99, '1614594975525-e45190c55d0b', 'A graceful palm that brings a fresh tropical feeling.']
+  ].map(([name, cost, photo, description], index) => ({ id: index + 1, name, cost, image: `https://images.unsplash.com/photo-${photo}?auto=format&fit=crop&w=700&q=80`, description })) },
   { category: 'Tropical', plants: [
-    { id: 4, name: 'Monstera Deliciosa', cost: 39.99, image: 'https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=700&q=80', description: 'Iconic split leaves with a bold tropical spirit.' },
-    { id: 5, name: 'Calathea Orbifolia', cost: 34.99, image: 'https://images.unsplash.com/photo-1604762524889-3e2fcc145683?auto=format&fit=crop&w=700&q=80', description: 'Silvery striped leaves that brighten any room.' },
-    { id: 6, name: 'Bird of Paradise', cost: 49.99, image: 'https://images.unsplash.com/photo-1597055181300-d7c5c7b3e3f0?auto=format&fit=crop&w=700&q=80', description: 'A statement plant made for sunny corners.' }
-  ]},
+    ['Monstera Deliciosa', 39.99, '1614594975525-e45190c55d0b', 'Iconic split leaves with a bold tropical spirit.'], ['Calathea Orbifolia', 34.99, '1604762524889-3e2fcc145683', 'Silvery striped leaves that brighten any room.'], ['Bird of Paradise', 49.99, '1597055181300-d7c5c7b3e3f0', 'A statement plant made for sunny corners.'], ['Fiddle Leaf Fig', 44.99, '1593691509543-c55fb32e5cee', 'Large violin-shaped leaves for a designer look.'], ['Philodendron', 28.99, '1614594975525-e45190c55d0b', 'A forgiving trailing plant with heart-shaped leaves.'], ['Croton Petra', 31.99, '1604762524889-3e2fcc145683', 'Colorful foliage that adds warmth and personality.']
+  ].map(([name, cost, photo, description], index) => ({ id: index + 7, name, cost, image: `https://images.unsplash.com/photo-${photo}?auto=format&fit=crop&w=700&q=80`, description })) },
   { category: 'Succulents', plants: [
-    { id: 7, name: 'Aloe Vera', cost: 14.99, image: 'https://images.unsplash.com/photo-1596547609652-9cf5d8d0f7d1?auto=format&fit=crop&w=700&q=80', description: 'A practical succulent with soothing natural gel.' },
-    { id: 8, name: 'Jade Plant', cost: 18.99, image: 'https://images.unsplash.com/photo-1567225557594-88d73e55f2cb?auto=format&fit=crop&w=700&q=80', description: 'A cheerful, long-lived classic for your windowsill.' },
-    { id: 9, name: 'String of Pearls', cost: 22.99, image: 'https://images.unsplash.com/photo-1630595593732-9f9b5d0d3a5e?auto=format&fit=crop&w=700&q=80', description: 'Delicate trailing beads with plenty of personality.' }
-  ]}
+    ['Aloe Vera', 14.99, '1596547609652-9cf5d8d0f7d1', 'A practical succulent with soothing natural gel.'], ['Jade Plant', 18.99, '1567225557594-88d73e55f2cb', 'A cheerful, long-lived classic for your windowsill.'], ['String of Pearls', 22.99, '1630595593732-9f9b5d0d3a5e', 'Delicate trailing beads with plenty of personality.'], ['Zebra Haworthia', 16.99, '1593482892290-f54927ae2c2e', 'A compact striped succulent for bright shelves.'], ['Echeveria', 15.99, '1596547609652-9cf5d8d0f7d1', 'A sculptural rosette in a beautiful blue-green tone.'], ['Panda Plant', 13.99, '1567225557594-88d73e55f2cb', 'Soft, fuzzy leaves with charming chocolate edges.']
+  ].map(([name, cost, photo, description], index) => ({ id: index + 13, name, cost, image: `https://images.unsplash.com/photo-${photo}?auto=format&fit=crop&w=700&q=80`, description })) }
 ];
