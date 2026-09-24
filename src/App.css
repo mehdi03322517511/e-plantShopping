@@ -1,0 +1,4 @@
+/* Landing page styling is provided by styles.css. This file documents the Paradise Nursery background. */
+.hero { background-image: url('https://images.unsplash.com/photo-1545165375-586e5f3f0b52?auto=format&fit=crop&w=2000&q=85'); }
+.product-button:disabled { background: #9aa89b; cursor: not-allowed; opacity: .8; }
+.continue-shopping { background: transparent; color: #315e3b; padding: 20px 0; font-weight: 700; }
