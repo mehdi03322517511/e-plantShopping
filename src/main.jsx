@@ -2,18 +2,18 @@ import React, { useState } from 'react';
 import { ArrowRight, Leaf, ShoppingCart } from 'lucide-react';
 import { plantsArray } from './data/plants';
 import { ProductList } from './components/ProductList';
-import { cartReducer, addItem, updateItem, removeItem } from './components/CartSlice';
+import cartReducer from './components/CartSlice';
 import { Cart } from './components/Cart';
 import './styles.css';
 
 function App() {
   const [page, setPage] = useState('home');
-  const [cart, dispatch] = React.useReducer(cartReducer, []);
+  const [cart, dispatch] = React.useReducer(cartReducer, { items: [] });
   const [notice, setNotice] = useState('');
-  const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+  const cartCount = cart.items.reduce((total, item) => total + item.quantity, 0);
 
   const handleAddToCart = (plant) => {
-    dispatch(addItem(plant));
+    dispatch({ type: 'cart/addItem', payload: plant });
     setNotice(`${plant.name} added to your cart`);
     window.setTimeout(() => setNotice(''), 2200);
   };
